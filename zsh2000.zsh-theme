@@ -95,14 +95,6 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
-prompt_rvm() {
-  local rvm_prompt
-  rvm_prompt=$(rvm-prompt)
-  if [ "$rvm_prompt" != "" ]; then
-    prompt_segment_right "240" white "$rvm_prompt "
-  fi
-}
-
 build_prompt() {
   if [ "$ZSH_2000_DISABLE_STATUS" != 'true' ]; then
     RETVAL=$?
@@ -171,9 +163,6 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
-  if [ "$ZSH_2000_DISABLE_RVM" != 'true' ]; then
-    prompt_rvm
-  fi
   prompt_time
 }
 

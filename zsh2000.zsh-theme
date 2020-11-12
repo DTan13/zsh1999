@@ -165,6 +165,4 @@ build_rprompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
-if [ "$ZSH_2000_DISABLE_RIGHT_PROMPT" != 'true' ]; then
-  RPROMPT='%{%f%b%k%}$(git_time_since_commit)$(build_rprompt)'
-fi
+RPROMPT='%{%f%b%k%}$(git_time_since_commit)$(build_rprompt)'

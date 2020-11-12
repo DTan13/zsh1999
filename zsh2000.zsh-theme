@@ -88,6 +88,17 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
+prompt_battery() {
+  local battery_status=''
+
+  if [ -z "$(acpi -b | grep Charging)" ]; then
+    battery_status="✖"
+  else
+    battery_status="ϟ"
+  fi
+  prompt_segment_right yellow black "$(cat /sys/class/power_supply/BAT0/capacity)%% $battery_status "
+}
+
 build_prompt() {
   RETVAL=$?
   prompt_status
@@ -154,6 +165,7 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
+  prompt_battery
   prompt_time
 }
 

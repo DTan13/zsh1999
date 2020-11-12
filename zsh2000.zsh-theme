@@ -49,10 +49,7 @@ prompt_end() {
 
 prompt_user_hostname() {
   local user=$(whoami)
-
-  if [ -n "$SSH_CLIENT" ]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$user@%m"
-  fi
+  prompt_segment black default "%(!.%{%F{yellow}%}.)$user@%m"
 }
 
 prompt_git() {

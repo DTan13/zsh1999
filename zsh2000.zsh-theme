@@ -88,6 +88,17 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
+prompt_connection() {
+  local connection_status=""
+
+  if [[ "$(nmcli networking connectivity)" == "full" ]]; then
+    connection_status="🖧"
+  else
+    connection_status="✖"
+  fi
+  prompt_segment_right green black "$connection_status  "
+}
+
 prompt_battery() {
   local battery_status=''
 
@@ -165,6 +176,7 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
+  prompt_connection
   prompt_battery
   prompt_time
 }

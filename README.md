@@ -4,6 +4,14 @@
 
 <br>
 
+## Demo
+
+<img src="https://raw.githubusercontent.com/DTan13/zsh1999/main/zsh1999_demo_2.png" alt="Demo 1"/>
+<br>
+<img src="https://raw.githubusercontent.com/DTan13/zsh1999/main/zsh1999_demo_1.png" alt="Demo 2"/>
+
+<br>
+
 ## How to Install
 
 - Clone the Repo
@@ -28,7 +36,7 @@
 
 ## Issues
 
-Problems while using? [Tell me!](https://github.com/DTan13/zsh1999/issues/new?body=%40DTan13%0A<!--Describe+Your+Issue+here+and+Click+Submit+new+issue.-->%0A%0A%0A)
+Problems while using? [Tell me!](https://github.com/DTan13/zsh1999/issues/new?body=%40DTan13%0A<!--Describe+Your+Issue+here+and+Click+Submit+new+issue.-->%0A)
 
 <br>
 

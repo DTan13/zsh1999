@@ -65,11 +65,7 @@ prompt_git() {
     else
       prompt_segment green black
     fi
-    if [ "$ZSH_2000_DISABLE_GIT_STATUS" != "true" ]; then
-      echo -n "\ue0a0 ${ref/refs\/heads\//}$dirty"$(git_prompt_status)
-    else
-      echo -n "\ue0a0 ${ref/refs\/heads\//}$dirty"
-    fi
+    echo -n "\ue0a0 ${ref/refs\/heads\//}$dirty"$(git_prompt_status)
   fi
 }
 

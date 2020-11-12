@@ -96,10 +96,8 @@ prompt_time() {
 }
 
 build_prompt() {
-  if [ "$ZSH_2000_DISABLE_STATUS" != 'true' ]; then
-    RETVAL=$?
-    prompt_status
-  fi
+  RETVAL=$?
+  prompt_status
   prompt_user_hostname
   prompt_dir
   prompt_git

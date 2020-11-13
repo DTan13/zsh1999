@@ -85,7 +85,7 @@ prompt_status() {
 }
 
 prompt_time() {
-  prompt_segment_right white black '%D{%H:%M:%S} '
+  prompt_segment_right white black '%D{%H:%M:%S@%f/%m} '
 }
 
 prompt_connection() {

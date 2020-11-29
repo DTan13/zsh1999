@@ -85,26 +85,27 @@ prompt_status() {
 }
 
 prompt_time() {
-  prompt_segment_right white black '%D{%H:%M:%S@%f/%m} '
+  prompt_segment_right white black '%D{%H:%M:%S[%f/%m]} '
 }
 
 prompt_connection() {
   local connection_status=""
 
   if [[ "$(nmcli networking connectivity)" == "full" ]]; then
-    connection_status="🖧"
+    connection_status="\u21D5"
   else
-    connection_status="✖"
+    connection_status="\u00D7"
   fi
-  prompt_segment_right green black "$connection_status  "
+  prompt_segment_right green black "$connection_status "
 }
 
 prompt_battery() {
   local battery_status=''
 
   if [[ "$(cat /sys/class/power_supply/ADP0/online)" == "0" ]]; then
+    battery_status="\u00D7"
   else
-    battery_status="ϟ"
+    battery_status="\u21AF"
   fi
   prompt_segment_right yellow black "$(cat /sys/class/power_supply/BAT0/capacity)%% $battery_status "
 }

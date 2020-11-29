@@ -102,8 +102,7 @@ prompt_connection() {
 prompt_battery() {
   local battery_status=''
 
-  if [ -z "$(acpi -b | grep Charging)" ]; then
-    battery_status="✖"
+  if [[ "$(cat /sys/class/power_supply/ADP0/online)" == "0" ]]; then
   else
     battery_status="ϟ"
   fi

@@ -22,17 +22,25 @@
     cd zsh1999
 
     ln -s zsh1999.zsh-theme ~/.oh-my-zsh/themes/zsh1999.zsh-theme
+
+    # with docker support
+    ln -s zsh1999-docker.zsh-theme ~/.oh-my-zsh/themes/zsh1999-docker.zsh-theme
+
 ```
 
 - Modify ZSH_THEME in ~/.zshrc
 
 ```zsh
     ZSH_THEME="zsh1999"
+
+    # with docker support
+    ZSH_THEME="zsh1999-docker"
 ```
 
 ## Dependencies
 
 - [Powerline-patched fonts](https://github.com/Lokaltog/powerline-fonts)
+- nmcli
 
 ## Issues
 

@@ -110,6 +110,10 @@ prompt_battery() {
   prompt_segment_right yellow black "$(cat /sys/class/power_supply/BAT0/capacity)%% $battery_status "
 }
 
+prompt_docker_containers(){
+  prompt_segment_right blue white "\u25A5 $(docker container ls -q | wc -l)/$(docker container ls -aq | wc -l) "
+}
+
 build_prompt() {
   RETVAL=$?
   prompt_status
@@ -176,6 +180,7 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
+  prompt_docker_containers
   prompt_connection
   prompt_battery
   prompt_time

@@ -1,16 +1,15 @@
 # zsh1999
 
-### Just a new [zsh](https://ohmyz.sh/) theme with network connectivity status and battery status
+## Just a new [zsh](https://ohmyz.sh/) theme with network connectivity status, battery status and optional prompt for docker containers
 
-<br>
+## Demos
 
-## Demo
-
-<img src="https://raw.githubusercontent.com/DTan13/zsh1999/main/zsh1999_demo_2.png" alt="Demo 1"/>
-<br>
-<img src="https://raw.githubusercontent.com/DTan13/zsh1999/main/zsh1999_demo_1.png" alt="Demo 2"/>
-
-<br>
+Initial
+![Initial demo](./zsh1999_initial.png?raw=true)
+Git
+![Initial demo](./zsh1999_git.png?raw=true)
+Docker
+![Initial demo](./zsh1999_docker.png?raw=true)
 
 ## How to Install
 

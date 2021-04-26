@@ -39,7 +39,6 @@ Docker
 ## Dependencies
 
 - [Powerline-patched fonts](https://github.com/Lokaltog/powerline-fonts)
-- nmcli
 
 ## Issues
 
